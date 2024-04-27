@@ -1,0 +1,20 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: GETEWAY-SERVICE
+
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: USER-SERVICE
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
